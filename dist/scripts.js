@@ -46,8 +46,10 @@ function displayData(data, timeframe) {
       <div class="card type-${time.title.replace(/\s+/g, '-').toLowerCase()}">
         <div class="inner">
           <span class="title">${time.title}</span>
-          <span class="current-time">${time.timeframes[timeframe].current}hrs</span>
-          <span class="previous-time">${timeframeText} - ${time.timeframes[timeframe].previous}hrs</span>
+          <div class="time-wrapper">
+            <span class="current-time">${time.timeframes[timeframe].current}hrs</span>
+            <span class="previous-time">${timeframeText} - ${time.timeframes[timeframe].previous}hrs</span>
+          </div>
         </div>
       </div>
     `;

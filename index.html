@@ -12,21 +12,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/output.css">
 </head>
-<body class="flex justify-center items-center min-h-screen bg-darker-blue pt-10">
-
-  <div class="max-w-5xl w-full cards grid gap-10 grid-cols-4">
+<body class="flex justify-center items-center min-h-screen bg-darker-blue pt-10 px-5">
+  <div class="max-w-5xl w-full cards grid gap-y-10 lg:gap-10 grid-cols-1 lg:grid-cols-4">
     <div class="bio col-span-1 bg-dark-blue rounded-xl">
-      <div class="inner bg-[#5747ea] pt-8 pb-7 px-6 rounded-xl">
-        <img src="dist/images//image-jeremy.png" alt="Jeremy Robson profile photo" class="w-20 border-2 border-white rounded-full mb-8">
-        <h1 class="text-sm mb-12 text-pale-blue">Report for <span class="block mt-1 text-4xl text-white font-light">Jeremy <br>Robson</span></h1>
+      <div class="inner bg-[#5747ea] py-8 px-6 rounded-xl flex flex-row lg:flex-col">
+        <img src="dist/images//image-jeremy.png" alt="Jeremy Robson profile photo" class="w-16 lg:w-20 h-16 lg:h-20 border-2 border-white rounded-full me-5 lg:me-0 lg:mb-8">
+        <h1 class="text-sm lg:mb-12 text-pale-blue">Report for <span class="block mt-1  text-2xl lg:text-4xl text-white font-light">Jeremy Robson</span></h1>
       </div>
-      <ul class="pt-8 px-6 text-lg font-light">
+      <ul class="flex flex-row lg:flex-col pt-6 lg:pt-5 px-6 text-lg font-light">
         <li class="timeframe-select" data-timeframe="daily">Daily</li>
         <li class="timeframe-select active" data-timeframe="weekly">Weekly</li>
         <li class="timeframe-select" data-timeframe="monthly">Monthly</li>
       </ul>
     </div>
-    <div id="time-cards" class="col-span-3 grid grid-cols-3 gap-10"></div>
+    <div id="time-cards" class="col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-10"></div>
   </div>
 </body>
 <script src="dist/scripts.js"></script>

@@ -540,6 +540,31 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.card .title {
+  position: relative;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  .card .title {
+    margin-bottom: 2rem;
+  }
+}
+
+.card .title:after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  height: 5px;
+  width: 21px;
+  background-image: url('images/icon-ellipsis.svg');
+}
+
 .card:before {
   height: 3rem;
   border-top-left-radius: 0.75rem;
@@ -590,16 +615,8 @@ video {
   grid-column: span 3 / span 3;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
+.me-5 {
+  margin-inline-end: 1.25rem;
 }
 
 .mt-1 {
@@ -618,44 +635,32 @@ video {
   display: grid;
 }
 
-.h-full {
-  height: 100%;
+.h-16 {
+  height: 4rem;
 }
 
 .min-h-screen {
   min-height: 100vh;
 }
 
-.w-20 {
-  width: 5rem;
+.w-16 {
+  width: 4rem;
 }
 
 .w-full {
   width: 100%;
 }
 
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
 .max-w-5xl {
   max-width: 64rem;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.content-center {
-  align-content: center;
+.flex-row {
+  flex-direction: row;
 }
 
 .items-center {
@@ -668,6 +673,10 @@ video {
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-y-10 {
+  row-gap: 2.5rem;
 }
 
 .rounded-full {
@@ -702,41 +711,37 @@ video {
   background-color: hsl(226 43% 10% / var(--tw-bg-opacity));
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.pb-7 {
-  padding-bottom: 1.75rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pt-10 {
   padding-top: 2.5rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-sm {
@@ -784,17 +789,32 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.card .title {
-  margin-bottom: 1.25rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 400;
+.card .time-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .card .time-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .card .current-time {
   margin-bottom: 0px;
-  font-size: 3.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 300;
+}
+
+@media (min-width: 1024px) {
+  .card .current-time {
+    margin-bottom: 1rem;
+    font-size: 3.25rem;
+  }
 }
 
 .card .previous-time {
@@ -805,7 +825,8 @@ body {
 }
 
 .timeframe-select {
-  margin-bottom: 0.75rem;
+  margin-inline-end: 2rem;
+  margin-bottom: 1.25rem;
   cursor: pointer;
   --tw-text-opacity: 1;
   color: hsl(235 45% 61% / var(--tw-text-opacity));
@@ -816,7 +837,65 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1024px) {
+  .timeframe-select {
+    margin-inline-end: 0px;
+    margin-bottom: 0.75rem;
+  }
+}
+
 .timeframe-select.active {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .lg\:me-0 {
+    margin-inline-end: 0px;
+  }
+
+  .lg\:h-20 {
+    height: 5rem;
+  }
+
+  .lg\:w-20 {
+    width: 5rem;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
+  .lg\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .lg\:pt-6 {
+    padding-top: 1.5rem;
+  }
+
+  .lg\:pt-5 {
+    padding-top: 1.25rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
