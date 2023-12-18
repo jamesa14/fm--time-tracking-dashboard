@@ -25,7 +25,8 @@ Users should be able to:
 ![](./screenshot.png)
 
 ### Links
-
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-html-tailwind-css-js-aDlreo4O_d](https://www.frontendmentor.io/solutions/time-tracking-dashboard-html-tailwind-css-js-aDlreo4O_d)
+- Live Site URL: [https://jamesa14.github.io/fm--time-tracking-dashboard/](https://jamesa14.github.io/fm--time-tracking-dashboard/)
 
 
 ### Built with
