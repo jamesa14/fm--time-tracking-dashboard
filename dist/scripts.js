@@ -1,5 +1,5 @@
 // Data
-const url = '/data.json';
+const url = './data.json';
 let timeframeData = '';
 
 async function getData(url) {
